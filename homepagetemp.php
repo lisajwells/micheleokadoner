@@ -79,12 +79,11 @@ $post_slug=$post->post_name;*/
 						foreach( $widths as $key => $itemwidth ) {
 							$itemwidth =$itemwidth;
 						};
-						// d($itemwidth);
 
 				        ?>
 				        <div class="home_img_box grid-item <?php echo $label.' '; echo $itemwidth; ?>">
 				        	<a href="<?php echo get_permalink(); ?>" class="box-link">
-				        		<img src="<?php echo get_the_post_thumbnail_url() ?>">
+				        		<?php the_post_thumbnail('large'); ?>
 				        	</a>
 				        	<div class="home_below_title_gen"><?php echo get_the_title(); ?></div>
 				        </div>

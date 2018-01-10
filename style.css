@@ -254,12 +254,16 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
   width: 28%;
 }
 
+.grid-item--width2 img {
+    width: 90%;
+}
+
 .grid-item--width3 {
   width: 42%;
 }
 
 .grid-item {
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
   height: auto;
   float: left;
   margin-bottom: 10px;
