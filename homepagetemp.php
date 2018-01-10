@@ -67,13 +67,22 @@ $post_slug=$post->post_name;*/
 						// For display the data we need to echo it
 
 				        $products->the_post();
+
 						$values = CFS()->get( 'SelectGeneration' );
 						$label='';
 						foreach( $values as $key => $label ) {
 							$label =$label;
-						}
+						};
+
+						$widths = CFS()->get( 'selectwidth' );
+						$itemwidth = '';
+						foreach( $widths as $key => $itemwidth ) {
+							$itemwidth =$itemwidth;
+						};
+						// d($itemwidth);
+
 				        ?>
-				        <div class="home_img_box grid-item <?php echo $label; ?>">
+				        <div class="home_img_box grid-item <?php echo $label.' '; echo $itemwidth; ?>">
 				        	<a href="<?php echo get_permalink(); ?>" class="box-link">
 				        		<img src="<?php echo get_the_post_thumbnail_url() ?>">
 				        	</a>

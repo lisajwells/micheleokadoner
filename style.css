@@ -246,6 +246,10 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
   width: 14%;
 }
 
+.grid-item--width1 {
+  width: 14%;
+}
+
 .grid-item--width2 {
   width: 28%;
 }
