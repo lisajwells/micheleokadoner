@@ -83,7 +83,15 @@ $post_slug=$post->post_name;*/
 				        ?>
 				        <div class="home_img_box grid-item <?php echo $label.' '; echo $itemwidth; ?>">
 				        	<a href="<?php echo get_permalink(); ?>" class="box-link">
-				        		<?php the_post_thumbnail('large'); ?>
+
+				        		<?php if ($itemwidth == 'grid-item--width2') {
+				        		the_post_thumbnail('large'); }
+				        		else {
+
+				        		the_post_thumbnail();
+				        		}
+				        		?>
+
 				        	</a>
 				        	<div class="home_below_title_gen"><?php echo get_the_title(); ?></div>
 				        </div>
