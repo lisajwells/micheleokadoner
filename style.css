@@ -22,7 +22,7 @@ ul.generation_list li a:hover {text-decoration: none;}
 .home_below_title_gen{visibility:hidden;}
 .visible{visibility:initial;}
 /*.home_img_box {float: left;text-align: center;color: #000;width: 12%;}*/
-.product-container {float: left;width: 93%;}
+/*.product-container {float: left;width: 93%;}*/
 /*.page-template-homepagetemp .product-container{    width: 100%;  float: none !important;}*/
 
 .generation_list li a:hover {color: #000;}
@@ -51,7 +51,7 @@ div#Wrapper {box-shadow: none !important;}
 
 .top_bar_left.clearfix { max-width: 1190px; margin: 0 auto !important; float: none !important;}
 #Top_bar ul#menu-main-menu li:last-child { margin-right: 0 !important;}
-.content_wrapper.clearfix { max-width: 1300px; margin: 0 auto; float: none !important;}
+.content_wrapper.clearfix { max-width: 1245px; margin: 0 auto; float: none !important;}
 #Footer .footer_copy .copyright {font-size: 13px;}
 .copyright {padding-left: 6%;}
 .page-template-prductpage .widget-area:before { background: #fff;}
@@ -223,8 +223,7 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
 
 /* fluid 5 columns */
 
-* {
-}
+/* HOMEPAGE MASONRY GRID */
 
 .grid * {
   box-sizing: border-box;
@@ -243,27 +242,28 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
 
 .grid-sizer,
 .grid-item {
-  width: 14%;
+  width: 12.5%;
 }
 
 .grid-item--width1 {
-  width: 14%;
+  width: 12.5%;
 }
 
 .grid-item--width2 {
-  width: 28%;
+  width: 25%;
 }
 
-.grid-item--width2 img {
+.grid-item--width2 img,
+.grid-item--width3 img {
     width: 90%;
 }
 
 .grid-item--width3 {
-  width: 42%;
+  width: 37.5%;
 }
 
 .grid-item {
-  /*border: 1px solid #000;*/
+  /*border: 1px solid #ccc;*/
   height: auto;
   float: left;
   margin-bottom: 10px;
@@ -271,5 +271,32 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
 }
 
 #Content .grid-item img {
-  max-width: 65%;
+  max-width: 60%;
 }
+
+@media only screen and (min-width: 480px) and (max-width: 1119px) {
+  .grid-sizer,
+  .grid-item {
+    width: 20%;
+  }
+
+  .grid-item--width1 {
+    width: 20%;
+  }
+
+  .grid-item--width2 {
+    width: 40%;
+  }
+
+  .grid-item--width2 img,
+  .grid-item--width3 img {
+      width: 90%;
+  }
+
+  .grid-item--width3 {
+    width: 60%;
+  }
+
+
+}
+
