@@ -4,7 +4,21 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ) );
 
+    wp_register_script( 'masonry-cdn', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', null, null, true );
+    wp_enqueue_script( 'masonry-cdn');
+
+    wp_register_script( 'masonry-images-loaded', 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', null, null, true );
+    wp_enqueue_script( 'masonry-images-loaded');
+
 }
+
+/** Load jQuery and jQuery-ui script just before closing Body tag */
+// add_action('genesis_after_footer', 'crunchify_script_add_body');
+// function crunchify_script_add_body() {
+
+//       wp_register_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, null);
+//       wp_enqueue_script( 'jquery-ui');
+// }
 
 
 function create_post_type() {
