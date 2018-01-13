@@ -13,7 +13,7 @@ function create_post_type() {
       'labels' => array(
         'name' => __( 'Icon Gallery' ),
         'singular_name' => __( 'Product' ),
-		
+
       ),
       'public' => true,
       'has_archive' => true,
@@ -26,19 +26,19 @@ add_action( 'init', 'create_post_type' );
 add_action('init', 'my_custom_init');
     function my_custom_init() {
         // 'cat_product' is my post type
-        add_post_type_support( 'cat_product', 'thumbnail' ); 
+        add_post_type_support( 'cat_product', 'thumbnail' );
     }
 
 
 add_action( 'init', 'create_products_taxonomy', 0 );
- 
+
 //create a custom taxonomy name it topics for your posts
- 
+
 function create_products_taxonomy() {
- 
+
 // Add new taxonomy, make it hierarchical like categories
 //first do the translations part for GUI
- 
+
   $labels = array(
     'name' => _x( 'Categories', 'taxonomy general name' ),
     'singular_name' => _x( 'Category', 'taxonomy singular name' ),
@@ -46,15 +46,15 @@ function create_products_taxonomy() {
     'all_items' => __( 'All Categories' ),
     'parent_item' => __( 'Parent Category' ),
     'parent_item_colon' => __( 'Parent Category:' ),
-    'edit_item' => __( 'Edit Category' ), 
+    'edit_item' => __( 'Edit Category' ),
     'update_item' => __( 'Update Category' ),
     'add_new_item' => __( 'Add New Category' ),
     'new_item_name' => __( 'New Category Name' ),
     'menu_name' => __( 'Categories' ),
-  );    
- 
+  );
+
 // Now register the taxonomy
- 
+
   register_taxonomy('Categories',array('cat_product'), array(
     'hierarchical' => true,
     'labels' => $labels,
@@ -63,12 +63,12 @@ function create_products_taxonomy() {
     'query_var' => true,
     'rewrite' => array( 'slug' => 'Category' ),
   ));
- 
+
 }
 
-
-
 add_theme_support( 'post-thumbnails', array( 'cat_product' ) );
+add_image_size( 'home-large', 671, 671 );
+add_image_size( 'home-medium', 446, 446 );
 
 /** black page logo theme option **/
 
