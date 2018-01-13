@@ -275,7 +275,7 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
 }
 
 #Content .grid-item img {
-  max-width: 60%;
+  max-width: 51%;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1119px) {
