@@ -296,9 +296,10 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
     width: 60%;
   }
 
-  .grid-item--width2 img,
-  .grid-item--width3 img {
+  #Content .grid-item--width2 img,
+  #Content .grid-item--width3 img {
       width: 90%;
+      max-width: 90%;
   }
 
 } /*end 480-1119*/
@@ -321,9 +322,10 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
     width: 99%;
   }
 
-  .grid-item--width2 img,
-  .grid-item--width3 img {
+  #Content .grid-item--width2 img,
+  #Content .grid-item--width3 img {
       width: 90%;
+      max-width: 90%;
   }
 
 } /*end max479*/
