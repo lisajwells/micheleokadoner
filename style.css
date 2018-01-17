@@ -81,6 +81,19 @@ div#Side_slide {background-color: #fff;}
     /* overflow: hidden; */
 }
 
+.header-plain:not(.menu-highlight) #Top_bar .menu > li > a span:not(.description) {
+    font-size: 14px;
+    line-height: 25px !important;
+}
+
+ul#menu-main-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+
+
 #Top_bar.is-sticky .menu li {height: 60px;}
 
 #Top_bar.is-sticky {
@@ -143,6 +156,11 @@ div#rev_slider_1_1_wrapper { z-index: 9;}
 .cat_product-template-blackpagetemp #Top_bar ul#menu-main-menu .sub-menu li {margin: 0 !important;}
 .cat_product-template-blackpagetemp .content_wrapper.clearfix {margin: 0;max-width: 100%;}
 div#Content { padding-top: 0;}
+
+.home div#Content {
+  padding-top: 30px;
+}
+
 
 .cat_product-template-blackpagetemp .tp-tab-desc { color: #fff !important;}
 /** blackpage for post type cat_product end **/
@@ -223,6 +241,17 @@ footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
 @media only screen and (min-width:1200px) {
 
 }
+
+@media only screen and (max-width: 1239px) {
+    ul#menu-main-menu {
+        display: block;
+    }
+
+
+}
+
+
+
 /* RESPONSIVE CSS END */
 
 /* fluid 5 columns */
