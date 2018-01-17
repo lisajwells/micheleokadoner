@@ -71,7 +71,11 @@ a.close {color: #000 !important;}
 nav#menu { width: 100%;}
 ul#menu-main-menu { text-align: center; width: 100% !important;}
 div#Side_slide {background-color: #fff;}
-#Top_bar #menu-main-menu li {  margin-right: 48px !important;}
+
+#Top_bar #menu-main-menu li {
+    margin-right: 38px !important;
+}
+
 #Top_bar.is-sticky {
     height: 99px !important;
 }
@@ -81,7 +85,8 @@ div#Side_slide {background-color: #fff;}
     /* overflow: hidden; */
 }
 
-.header-plain:not(.menu-highlight) #Top_bar .menu > li > a span:not(.description) {
+.header-plain:not(.menu-highlight) #Top_bar .menu > li > a span:not(.description),
+#Header #Top_bar.is-sticky .menu > li > a span:not(.description) {
     font-size: 14px;
     line-height: 25px !important;
 }
@@ -97,11 +102,11 @@ ul#menu-main-menu {
 #Top_bar.is-sticky .menu li {height: 60px;}
 
 #Top_bar.is-sticky {
-    height: 99px !important;
+    height: 86px !important;
 }
 
 #Top_bar.is-sticky .menu {
-    height: 90px;
+    height: 86px;
     /* overflow: hidden; */
 }
 
