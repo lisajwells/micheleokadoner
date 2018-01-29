@@ -46,4 +46,4 @@
 
 	<?php do_action( 'mfn_hook_top' ); ?>
 
-	<div style="background: #000; padding: 1em; font-size: 46px; text-align: right;"><a href='<?php echo home_url(); ?>' style="padding: 1em; font-size: 46px; text-align: right;">X</a></div>
+	<div class="blackpage-X"><a href='<?php echo home_url(); ?>'><span>X</span></a></div>
