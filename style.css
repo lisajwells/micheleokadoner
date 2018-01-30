@@ -194,8 +194,12 @@ body {
   padding-bottom: 0 !important;
   /*padding-bottom: 10px !important;  */
   min-height: 100%;
-  background: khaki;
 }
+
+body.cat_product-template-blackpagetemp {
+  background: #000;
+}
+
 footer#Footer {
   position: absolute;
   right: 0;
