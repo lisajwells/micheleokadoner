@@ -5,7 +5,7 @@
 
  */
 
-get_header('blackpage');
+get_header('nonav');
 ?>
 
 <!-- #Content -->
@@ -26,6 +26,6 @@ get_header('blackpage');
 	</div>
 </div>
 
-<?php get_footer('blackpage-whitepage');
+<?php get_footer('empty');
 
 // Omit Closing PHP Tags

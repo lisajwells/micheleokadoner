@@ -1,6 +1,6 @@
 <?php
 /**
- * The Header for our theme.
+ * The Header for our icon slider pages.
  *
  * @package Betheme
  * @author Muffin group
