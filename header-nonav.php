@@ -46,4 +46,4 @@
 
 	<?php do_action( 'mfn_hook_top' ); ?>
 
-	<div class="blackpage-X"><a href='<?php echo home_url(); ?>'><span>X</span></a></div>
+	<div class="fake-close-X"><a href='<?php echo home_url(); ?>'><span>X</span></a></div>
