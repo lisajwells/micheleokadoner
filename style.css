@@ -196,7 +196,8 @@ body {
   min-height: 100%;
 }
 
-body.cat_product-template-blackpagetemp {
+body.cat_product-template-blackpagetemp,
+body.page-template-blackpagetemp {
   background: #000;
 }
 
@@ -212,6 +213,10 @@ footer#Footer {
 
 .cat_product-template-blackpagetemp div#Content {
    /*margin-bottom: 40px !important;*/
+}
+
+.page-template-blackpagetemp {
+
 }
 
 .cat_product-template-blackpagetemp .content_wrapper.clearfix {    margin-top: -43px !important;}
