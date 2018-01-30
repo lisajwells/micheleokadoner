@@ -209,7 +209,11 @@ footer#Footer {
 
 /* 1-8-2018 */
 .cat_product-template-blackpagetemp footer#Footer {    bottom: 0px !important;}
-.cat_product-template-blackpagetemp div#Content {    margin-bottom: 40px !important;}
+
+.cat_product-template-blackpagetemp div#Content {
+   /*margin-bottom: 40px !important;*/
+}
+
 .cat_product-template-blackpagetemp .content_wrapper.clearfix {    margin-top: -43px !important;}
 .cat_product-template-blackpagetemp .tp-tab {    display: none;}
 .cat_product-template-blackpagetemp .tp-tab.selected {text-align: center;display: block;}
