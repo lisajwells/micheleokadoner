@@ -177,10 +177,32 @@ div#Content { padding-top: 0;}
 .home_below_title_gen {font-size: 13px !important;}
 .home_container.product-container { padding-top: 30px;}
 *//* 21-12-17 css - FooterBottom */
-div#Content {margin-bottom:115px;}
-html {  height: 100%;  box-sizing: border-box;}
-body {  position: relative;  margin: 0;  padding-bottom: 10px !important;  min-height: 100%;}
-footer#Footer {  position: absolute; right: 0;  bottom: 40px;  left: 0;}
+
+div#Content {
+  margin-bottom: 83px; /* height of footer */
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background: pink;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 0 !important;
+  /*padding-bottom: 10px !important;  */
+  min-height: 100%;
+  background: khaki;
+}
+footer#Footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 /* 1-8-2018 */
 .cat_product-template-blackpagetemp footer#Footer {    bottom: 0px !important;}
 .cat_product-template-blackpagetemp div#Content {    margin-bottom: 40px !important;}
