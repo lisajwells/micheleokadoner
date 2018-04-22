@@ -22,9 +22,6 @@ get_header();
 					while ( have_posts() ){
 						the_post();							// Post Loop
 						mfn_builder_print( get_the_ID() );	// Content Builder & WordPress Editor Content
-						/*global $post;
-$post_slug=$post->post_name;*/
-// For display the data we need to echo it
 					}
 				?>
 
@@ -49,12 +46,7 @@ $post_slug=$post->post_name;*/
 
 
 				<?php
-				$args = array(
-					'post_type' => 'cat_product',
-					'posts_per_page' => -1
-
-				);
-				$products = new WP_Query( $args );
+				$products = michelle_oka_doner_portfolio_query_all();
 
 				?>
 				<div class="vc_row home_container product-container grid">
@@ -82,7 +74,7 @@ $post_slug=$post->post_name;*/
 
 				        ?>
 				        <div class="home_img_box grid-item <?php echo $label.' '; echo $itemwidth; ?>">
-				        	<a href="<?php echo get_permalink(); ?>" class="box-link">
+				        	<a href="#/icon-gallery/<?php echo esc_attr( $post->ID ) ?>" class="box-link">
 
 				        		<?php if ( $itemwidth == 'grid-item--width2' ) {
 				        			the_post_thumbnail('home-medium'); }

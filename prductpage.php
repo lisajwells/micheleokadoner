@@ -50,21 +50,7 @@ $post_slug=$post->post_name;
 				</div>
 				
 				
-				<?php
-				$args = array(
-	'post_type' => 'cat_product',
-	'posts_per_page' => -1,
-	'tax_query' => array(
-		array(
-			'taxonomy' => 'Categories',
-			'field'    => 'slug',
-			'terms'    => $post_slug,
-		),
-	),
-);
-$products = new WP_Query( $args );
-
-?>
+				<?php $products = michelle_oka_doner_portfolio_query_categorized( $post_slug ); ?>
   <div class="vc_row product-container">
   
     <?php
