@@ -184,7 +184,9 @@ div#Content { padding-top: 0;}
 *//* 21-12-17 css - FooterBottom */
 
 div#Content {
-  margin-bottom: 83px; /* height of footer */
+    margin-bottom: 83px;
+    max-width: 1190px;
+    margin: 0 auto 83px; /* height of footer */
 }
 
 html {
