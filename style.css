@@ -33,6 +33,11 @@ ul.generation_list li a:hover {text-decoration: none;}
 .single-cat_product .next {display: none;}
 .single-cat_product a.next { display: none; }
 .single-cat_product .fixed-nav.format- { display: none; }
+
+#Top_bar {
+    margin-bottom: 4em;
+}
+
 #Top_bar .menu_wrapper {  width: 70%; }
 
 .logo {width: 20%; text-align: right;}
