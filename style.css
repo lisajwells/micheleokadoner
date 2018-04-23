@@ -129,6 +129,10 @@ div#rev_slider_1_1_wrapper { z-index: 9;}
 .erinyen .tp-tab-desc { color: #000 !important;}
 /**** black page template css   ****/
 
+.page-template-blackpagetemp #Wrapper {
+   background-color: #000;color: #fff;
+}
+
 .page-template-blackpagetemp .content_wrapper.clearfix { background-color: #000;color: #fff; }
 .page-template-blackpagetemp #Top_bar { background-color: #000 !important;border-bottom:0 !important; }
 .page-template-blackpagetemp #menu {background-color: #000 !important;}
