@@ -212,6 +212,27 @@ body.page-template-blackpagetemp {
   background: #000;
 }
 
+/*contact page*/
+
+.page-id-570 #Wrapper {
+    background-image: url(http://box5187.temp.domains/~icheleok/wp-content/uploads/2017/12/AWOTB_Icon_V4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-id-570 #Wrapper #Content,
+.page-id-570 #Wrapper #Content .widget-area {
+  background: transparent;
+}
+
+.page-id-570 #Wrapper #Content .sidebar .widget-area:before {
+  background: transparent;
+
+}
+
+
+/*footer*/
+
 footer#Footer {
   position: absolute;
   right: 0;
