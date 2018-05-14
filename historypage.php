@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ProductPage Template
+ * Template Name: HistoryPage Template
  *
  * @package Betheme
  * @author Muffin Group
@@ -50,7 +50,7 @@ get_header();
                     </div>
 
 
-                    <?php $products = michelle_oka_doner_portfolio_query_categorized($post_slug); ?>
+                    <?php $products = michelle_oka_doner_portfolio_query_history($post_slug); ?>
                     <div class="vc_row product-container">
 
                         <?php

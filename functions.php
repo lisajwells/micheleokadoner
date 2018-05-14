@@ -211,3 +211,25 @@ function michelle_oka_doner_portfolio_query_categorized( $slug ) {
 
 	return new WP_Query( $args );
 }
+
+function michelle_oka_doner_portfolio_query_history( $slug ) {
+    $args     = [
+        'post_type'      => 'cat_product',
+        'posts_per_page' => - 1,
+        'tax_query'      => [
+            [
+                'taxonomy' => 'Categories',
+                'field'    => 'slug',
+                'terms'    => $slug,
+            ],
+            [
+                'taxonomy' => 'Categories',
+                'terms'    => 'history',
+                'field'    => 'slug',
+                'operator' => 'IN',
+            ]
+        ],
+    ];
+
+    return new WP_Query( $args );
+}
