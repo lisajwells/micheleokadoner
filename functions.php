@@ -179,7 +179,7 @@ function michelle_oka_doner_portfolio_query_all() {
 		'tax_query' => [
 			[
 				'taxonomy' => 'Categories',
-				'terms'    => 'supporting',
+				'terms'    => array('supporting', 'history'),
 				'field'    => 'slug',
 				'operator' => 'NOT IN',
 			]
