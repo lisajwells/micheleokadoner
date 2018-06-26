@@ -202,7 +202,7 @@ function michelle_oka_doner_portfolio_query_categorized( $slug ) {
 			],
 			[
 				'taxonomy' => 'Categories',
-				'terms'    => array('supporting', 'history'),
+				'terms'    => array('supporting'),
 				'field'    => 'slug',
 				'operator' => 'NOT IN',
 			]
