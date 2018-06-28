@@ -212,6 +212,10 @@ body.page-template-blackpagetemp {
   background: #000;
 }
 
+body.mobile-side-slide {
+    overflow-x: auto !important;
+}
+
 /*contact page*/
 
 .page-id-570 #Wrapper {
