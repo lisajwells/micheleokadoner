@@ -229,7 +229,20 @@ body.page-template-blackpagetemp {
   background: transparent;
 
 }
+/*press page*/
 
+.press-decade h3 {
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-bottom: 0;
+}
+
+.press-decade p {
+  line-height: 1.3em;
+  text-align: justify;
+  text-transform: uppercase;
+}
 
 /*footer*/
 
