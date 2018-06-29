@@ -75,7 +75,7 @@ get_header();
 							};
 
 							?>
-                            <div class="masonry_img_box grid-item <?php echo $label . ' ';
+                            <div class="image-box masonry_img_box grid-item <?php echo $label . ' ';
 							echo $itemwidth; ?>">
                                 <a href="#/icon-gallery/<?php echo esc_attr( $post->ID ) ?>" class="box-link">
 
