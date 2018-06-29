@@ -75,10 +75,21 @@ get_header();
 							};
 
 							?>
-                            <div class="image-box vc_col-sm-3 <?php echo $label; ?>">
-                                <a href="<?php echo get_permalink(); ?>" class="box-link"><img
-                                            src="<?php echo get_the_post_thumbnail_url() ?>"></a>
-                                <div class="below_title_gen"><?php echo get_the_title(); ?></div>
+                            <div class="masonry_img_box grid-item <?php echo $label . ' ';
+							echo $itemwidth; ?>">
+                                <a href="#/icon-gallery/<?php echo esc_attr( $post->ID ) ?>" class="box-link">
+
+									<?php if ( $itemwidth == 'grid-item--width2' ) {
+										the_post_thumbnail( 'home-medium' );
+									} elseif ( $itemwidth == 'grid-item--width3' ) {
+										the_post_thumbnail( 'home-large' );
+									} else {
+										the_post_thumbnail();
+									}
+									?>
+
+                                </a>
+                                <div class="home_below_title_gen"><?php echo get_the_title(); ?></div>
                             </div>
 						<?php
 						endwhile;
