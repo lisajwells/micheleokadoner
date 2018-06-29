@@ -61,14 +61,22 @@ get_header();
 							// For display the data we need to echo it
 
 							$products->the_post();
+
 							$values = CFS()->get( 'SelectGeneration' );
 							$label  = '';
 							foreach ( $values as $key => $label ) {
 								$label = $label;
-							}
+							};
+
+							$widths    = CFS()->get( 'selectwidth' );
+							$itemwidth = '';
+							foreach ( $widths as $key => $itemwidth ) {
+								$itemwidth = $itemwidth;
+							};
+
 							?>
-                            <div class="image-box vc_col-sm-3 <?php echo $label; ?>"><a
-                                        href="<?php echo get_permalink(); ?>" class="box-link"><img
+                            <div class="image-box vc_col-sm-3 <?php echo $label; ?>">
+                                <a href="<?php echo get_permalink(); ?>" class="box-link"><img
                                             src="<?php echo get_the_post_thumbnail_url() ?>"></a>
                                 <div class="below_title_gen"><?php echo get_the_title(); ?></div>
                             </div>
