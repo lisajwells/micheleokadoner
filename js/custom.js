@@ -19,11 +19,11 @@
       $(this).find(".below_title_gen").removeClass("show");
 
     });
-    $(".home_img_box").mouseover(function(){
+    $(".masonry_img_box").mouseover(function(){
     $(this).find(".home_below_title_gen").addClass("visible");
 
     });
-      $(".home_img_box").mouseout(function(){
+      $(".masonry_img_box").mouseout(function(){
       $(this).find(".home_below_title_gen").removeClass("visible");
 
     });
