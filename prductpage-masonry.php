@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Homepage Template
+ * Template Name: ProductPage Masonry Template
  *
  * @package Betheme
  * @author  Muffin Group
@@ -12,6 +12,8 @@ get_header();
     <!-- #Content -->
     <div id="Content">
         <div class="content_wrapper clearfix">
+            <!-- .four-columns - sidebar -->
+			<?php get_sidebar(); ?>
 
             <!-- .sections_group -->
             <div class="sections_group">
@@ -22,6 +24,9 @@ get_header();
 					while ( have_posts() ) {
 						the_post();                            // Post Loop
 						mfn_builder_print( get_the_ID() );    // Content Builder & WordPress Editor Content
+						global $post;
+						$post_slug = $post->post_name;
+						// For display the data we need to echo it
 					}
 					?>
 
@@ -42,15 +47,12 @@ get_header();
                             </div>
 
                         </div>
-                    </div><!-- end section-page-footer -->
+                    </div>
 
 
-					<?php
-					$products = michelle_oka_doner_portfolio_query_all();
+					<?php $products = michelle_oka_doner_portfolio_query_categorized( $post_slug ); ?>
+                    <div class="vc_row product-container">
 
-					?>
-                    <div class="vc_row home_container product-container grid">
-                        <div class="grid-sizer"></div>
 						<?php
 
 						while ( $products->have_posts() ) :
@@ -59,43 +61,24 @@ get_header();
 							// For display the data we need to echo it
 
 							$products->the_post();
-
 							$values = CFS()->get( 'SelectGeneration' );
 							$label  = '';
 							foreach ( $values as $key => $label ) {
 								$label = $label;
-							};
-
-							$widths    = CFS()->get( 'selectwidth' );
-							$itemwidth = '';
-							foreach ( $widths as $key => $itemwidth ) {
-								$itemwidth = $itemwidth;
-							};
-
+							}
 							?>
-                            <div class="home_img_box grid-item <?php echo $label . ' ';
-							echo $itemwidth; ?>">
-                                <a href="#/icon-gallery/<?php echo esc_attr( $post->ID ) ?>" class="box-link">
-
-									<?php if ( $itemwidth == 'grid-item--width2' ) {
-										the_post_thumbnail( 'home-medium' );
-									} elseif ( $itemwidth == 'grid-item--width3' ) {
-										the_post_thumbnail( 'home-large' );
-									} else {
-										the_post_thumbnail();
-									}
-									?>
-
-                                </a>
-                                <div class="home_below_title_gen"><?php echo get_the_title(); ?></div>
+                            <div class="image-box vc_col-sm-3 <?php echo $label; ?>"><a
+                                        href="<?php echo get_permalink(); ?>" class="box-link"><img
+                                            src="<?php echo get_the_post_thumbnail_url() ?>"></a>
+                                <div class="below_title_gen"><?php echo get_the_title(); ?></div>
                             </div>
 						<?php
 						endwhile;
 						wp_reset_postdata();
 						?>
-                    </div><!-- end product-container -->
+                    </div>
 
-                </div><!-- end entry-content -->
+                </div>
 
 				<?php if ( mfn_opts_get( 'page-comments' ) ): ?>
                     <div class="section section-page-comments">
@@ -109,7 +92,7 @@ get_header();
                     </div>
 				<?php endif; ?>
 
-            </div><!-- end sections_group -->
+            </div>
 
             <!-- .four-columns - sidebar -->
 			<?php get_sidebar(); ?>
