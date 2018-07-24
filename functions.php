@@ -17,7 +17,7 @@ function my_theme_enqueue_styles() {
 			$show = true;
 		}
 
-		if ( basename( get_page_template() ) === 'prductpage.php' ) {
+		if ( basename( get_page_template() ) === 'prductpage.php' || 'prductpage-masonry.php' ) {
 			$show = true;
 		}
 
