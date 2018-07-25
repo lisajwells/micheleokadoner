@@ -51,7 +51,7 @@ get_header();
 
 
 					<?php $products = michelle_oka_doner_portfolio_query_categorized( $post_slug ); ?>
-                    <div class="vc_row product-container product-container grid">
+                    <div class="vc_row product-container grid">
                         <div class="grid-sizer"></div>
 						<?php
 
