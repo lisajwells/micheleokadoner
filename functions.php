@@ -102,6 +102,7 @@ function create_products_taxonomy() {
 add_theme_support( 'post-thumbnails', array( 'cat_product' ) );
 add_image_size( 'home-large', 671, 671 );
 add_image_size( 'home-medium', 446, 446 );
+add_image_size( 'hard-crop-thumbnail', 150, 150, true );
 
 /**
  * Add taxonomy filtering to custom post types
@@ -179,7 +180,7 @@ function michelle_oka_doner_portfolio_query_all() {
 		'tax_query' => [
 			[
 				'taxonomy' => 'Categories',
-				'terms'    => array('supporting', 'history'),
+				'terms'    => array('supporting', 'history', 'talkwalk'),
 				'field'    => 'slug',
 				'operator' => 'NOT IN',
 			]
@@ -211,3 +212,14 @@ function michelle_oka_doner_portfolio_query_categorized( $slug ) {
 
 	return new WP_Query( $args );
 }
+/* use the custom url where it applies  - custom field currently only applies to books & walks/talks arj */
+function michelle_oka_doner_custom_url($url, $post) {
+
+	if ( 'cat_product' == get_post_type( $post ) ) {
+		$newurl = CFS()->get( 'link_url', $post->ID );
+		if (isset($newurl) && '' != $newurl ) 
+			$url = $newurl;
+		 }
+	return $url;
+}
+add_filter( 'post_type_link', 'michelle_oka_doner_custom_url', 10, 2 );

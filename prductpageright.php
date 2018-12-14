@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ProductPage Template
+ * Template Name: ProductPage Right Template
  *
  * @package Betheme
  * @author  Muffin Group
@@ -11,15 +11,14 @@ get_header();
 
     <!-- #Content -->
     <div id="Content">
-        <div class="content_wrapper clearfix">
+		<?php $post_slug = $post->post_name; ?>
+        <div class="content_wrapper product-content-wrapper<?php echo $post_slug ?>  clearfix">
             <!-- .four-columns - sidebar -->
-			<?php get_sidebar(); ?>
 
+			<?php  get_sidebar(); ?>
             <!-- .sections_group -->
             <div class="sections_group">
-
-                <div class="entry-content" itemprop="mainContentOfPage">
-
+			 <div class="entry-content" itemprop="mainContentOfPage">
 					<?php
 					while ( have_posts() ) {
 						the_post();                            // Post Loop
@@ -51,7 +50,8 @@ get_header();
 
 
 					<?php $products = michelle_oka_doner_portfolio_query_categorized( $post_slug ); ?>
-                    <div class="vc_row product-container">
+                    <div class="vc_row product-container product-container-right clearfix">
+	                    <div class="product-container-inner">
 
 						<?php
 
@@ -68,15 +68,16 @@ get_header();
 							}
 						//changed get_permalink to get_post_permalink for filter - see functions
 							?>
-                            <div class="image-box vc_col-sm-3 <?php echo $label; ?>"><a
+                            <div class="image-box vc_col-sm-3 vc_col_sm_3_right <?php echo $label; ?>"><a
                                         href="<?php echo get_post_permalink(); ?>" class="box-link"><img
-                                            src="<?php echo get_the_post_thumbnail_url() ?>"></a>
+                                            src="<?php echo get_the_post_thumbnail_url('', 'hard-crop-thumbnail') ?>"></a>
                                 <div class="below_title_gen"><?php echo get_the_title(); ?></div>
                             </div>
 						<?php
 						endwhile;
 						wp_reset_postdata();
 						?>
+	                    </div>
                     </div>
 
                 </div>

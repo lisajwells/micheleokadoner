@@ -34,11 +34,24 @@
 <?php do_action('wp_seo'); ?>
 
 <link rel="shortcut icon" href="<?php mfn_opts_show( 'favicon-img', THEME_URI .'/images/favicon.ico' ); ?>" />
+	
 <?php if( mfn_opts_get('apple-touch-icon') ): ?>
 <link rel="apple-touch-icon" href="<?php mfn_opts_show( 'apple-touch-icon' ); ?>" />
 <?php endif; ?>
 <!-- wp_head() -->
 <?php wp_head(); ?>
+	
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127160434-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127160434-1');
+</script>
+	
 </head>
 
 <!-- body -->

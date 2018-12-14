@@ -21,6 +21,8 @@ ul.generation_list li a:hover {text-decoration: none;}
 .single-cat_product i.icon.icon-left-open-big {display: none;}
 .home_below_title_gen{visibility:hidden;}
 .visible{visibility:initial;}
+
+
 /*.masonry_img_box {float: left;text-align: center;color: #000;width: 12%;}*/
 .product-container {
   /*float: left;*/
@@ -61,7 +63,7 @@ div#Wrapper {box-shadow: none !important;}
 .top_bar_left.clearfix { max-width: 1190px; margin: 0 auto !important; float: none !important;}
 #Top_bar ul#menu-main-menu li:last-child { margin-right: 0 !important;}
 .content_wrapper.clearfix { max-width: 1300px; margin: 0 auto; float: none !important;}
-#Footer .footer_copy .copyright {font-size: 13px;}
+#Footer .footer_copy .copyright {font-size: 13px; float:none !important;}
 .copyright {padding-left: 6%;}
 .page-template-prductpage .widget-area:before { background: #fff;}
 #Side_slide {background-color: #fff;}
@@ -219,7 +221,7 @@ body.mobile-side-slide {
 /*contact page*/
 
 .page-id-570 #Wrapper {
-    background-image: url(http://box5187.temp.domains/~icheleok/wp-content/uploads/2017/12/AWOTB_Icon_V4.png);
+    background-image: url(http://www.micheleokadoner.com/wp-content/uploads/2018/10/contact_background_wall_large.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -71,11 +71,16 @@ get_header();
 							foreach ( $widths as $key => $itemwidth ) {
 								$itemwidth = $itemwidth;
 							};
-
+							$newurl = CFS()->get( 'link_url', $post->ID );
+								if (isset($newurl) && '' != $newurl ) 
+									$url = $newurl;
+								else
+									$url = '#/icon-gallery/' .  esc_attr( $post->ID ) ; //get_the_permalink($post->ID);
+										
 							?>
                             <div class="masonry_img_box grid-item <?php echo $label . ' ';
 							echo $itemwidth; ?>">
-                                <a href="#/icon-gallery/<?php echo esc_attr( $post->ID ) ?>" class="box-link">
+                                <a href="<?php echo $url; ?>" class="box-link">
 
 									<?php if ( $itemwidth == 'grid-item--width2' ) {
 										the_post_thumbnail( 'home-medium' );

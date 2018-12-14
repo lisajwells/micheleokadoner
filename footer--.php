@@ -109,20 +109,15 @@ if( $back_to_top_class == 'hide' ){
 					?>
 
 					<!-- Copyrights -->
-					
+					<div class="copyright">
 						<?php
-							if ( is_front_page() ) {
-								
-								echo '<div class="copyright" align="center">';
-								echo'All artwork © 1964-2018 Michele Oka Doner c/o Artist Rights Society (ARS), New York. All rights reserved.';
-    } else {
-								
-								echo '<div class="copyright">';
+							if( mfn_opts_get('footer-copy') ){
 								echo do_shortcode( mfn_opts_get('footer-copy') );
-						
+							} else {
+								echo '&copy; '. date( 'Y' ) .' '. get_bloginfo( 'name' ) .'. All Rights Reserved. <a target="_blank" rel="nofollow" href="http://muffingroup.com">Muffin group</a>';
 							}
 						?>
-					
+					</div>
 
 					<?php
 						if( has_nav_menu( 'social-menu-bottom' ) ){
@@ -179,8 +174,5 @@ if( $back_to_top_class == 'hide' ){
 <?php wp_footer(); ?>
 	<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
 	<!-- <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script> -->
-
-<script src="//rum-static.pingdom.net/pa-5bc771487e84eb00160002af.js" async></script>
-
 </body>
 </html>
