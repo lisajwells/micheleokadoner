@@ -223,3 +223,36 @@ function michelle_oka_doner_custom_url($url, $post) {
 	return $url;
 }
 add_filter( 'post_type_link', 'michelle_oka_doner_custom_url', 10, 2 );
+
+/**
+ * Display all image sizes in dashboard other than the default, thumbnail, medium and large
+ *
+ */
+//add_action( 'admin_init', 'theme_additional_images' );
+
+//function theme_additional_images() {
+//	global $_wp_additional_image_sizes;
+//	$get_intermediate_image_sizes = get_intermediate_image_sizes();
+//
+//	echo '<pre>' . print_r($_wp_additional_image_sizes) . '</pre>';
+//}
+
+/**
+ * Remove unused image sizes from parent theme
+ *
+ */
+add_action('init', 'mod_remove_unused_image_sizes');
+
+function mod_remove_unused_image_sizes() {
+	remove_image_size('50x50');
+	remove_image_size('clients-slider');
+	remove_image_size('slider-content');
+	remove_image_size('testimonials');
+	remove_image_size('blog-navi');
+	remove_image_size('portfolio-mf');
+	remove_image_size('portfolio-mf-w');
+	remove_image_size('portfolio-mf-t');
+	remove_image_size('portfolio-list');
+	remove_image_size('blog-portfolio');
+}
+
